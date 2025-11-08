@@ -4,7 +4,7 @@
 The **Crop Recommendation System** is a machine learning project that helps farmers and researchers identify the **best crop to grow** based on environmental and soil factors.  
 It uses data-driven insights to recommend crops that will yield the highest productivity under given soil and weather conditions.
 
-lin:- https://92b43t2p-5000.inc1.devtunnels.ms/
+link:- https://92b43t2p-5000.inc1.devtunnels.ms/
 
 ---
 
@@ -69,6 +69,7 @@ To predict the **most suitable crop** based on the following parameters:
 
 3. **Model Evaluation**  
    - Check model performance using metrics like accuracy, precision, recall, and F1-score  
+
 
 
 
