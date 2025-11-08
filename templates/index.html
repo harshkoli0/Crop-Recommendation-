@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d4fc79, #96e6a1);
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 230px;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px #4CAF50;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #388e3c;
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 28px;
+        }
+        h2 {
+            color: #333;
+        }
+        /* PH SCALE */
+        .ph-scale {
+            display: flex;
+            width: 230px;
+            height: 20px;
+            margin: 10px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+        .ph-section {
+            flex: 1;
+        }
+        .acidic { background: #ff4d4d; }
+        .neutral { background: #ffff66; }
+        .alkaline { background: #4da6ff; }
+        .ph-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #555;
+            width: 230px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌾 Crop Recommendation System 🌱</h1>
+
+    <form method="POST">
+        <input type="number" step="any" name="nitrogen" placeholder="Nitrogen (N)" required><br>
+        <input type="number" step="any" name="phosphorus" placeholder="Phosphorus (P)" required><br>
+        <input type="number" step="any" name="potassium" placeholder="Potassium (K)" required><br>
+        <input type="number" step="any" name="temperature" placeholder="Temperature (°C)" required><br>
+        <input type="number" step="any" name="humidity" placeholder="Humidity (%)" required><br>
+        
+        <!-- PH INPUT + SCALE -->
+        <input type="number" step="any" name="ph" placeholder="pH" required><br>
+        <div class="ph-scale">
+            <div class="ph-section acidic"></div>
+            <div class="ph-section neutral"></div>
+            <div class="ph-section alkaline"></div>
+        </div>
+        <div class="ph-labels">
+            <span>0</span>
+            <span>7</span>
+            <span>14</span>
+        </div>
+
+        <input type="number" step="any" name="rainfall" placeholder="Rainfall (mm)" required><br>
+        <input type="number" step="any" name="yield_hd" placeholder="Yield (HD)" required><br>
+        
+        <button type="submit">Predict Crop</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Recommended Crop: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
+
+</body>
+</html>
+
