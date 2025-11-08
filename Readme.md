@@ -70,6 +70,9 @@ To predict the **most suitable crop** based on the following parameters:
 3. **Model Evaluation**  
    - Check model performance using metrics like accuracy, precision, recall, and F1-score  
 
+app interface:-
+
+<img width="1006" height="854" alt="image" src="https://github.com/user-attachments/assets/e8b9c68d-4279-40d6-8bac-5fd0ce8d23d0" />
 
 
 
